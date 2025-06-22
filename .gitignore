@@ -1,0 +1,58 @@
+# Ignore WordPress core files
+/wp-admin/
+/wp-includes/
+/wp-content/upgrade/
+/wp-content/cache/
+/wp-content/uploads/
+/wp-content/backup-*/
+
+# Ignore WordPress config and sensitive files
+wp-config.php
+wp-config-sample.php
+.htaccess
+.env
+
+# Ignore Composer dependencies
+/vendor/
+
+# Ignore Node.js dependencies
+/node_modules/
+
+# Ignore Gulp-generated files
+/dist/
+
+# Ignore compiled CSS/JS files if using Gulp to generate them
+*.css.map
+*.js.map
+*.css
+*.js
+
+# Ignore SCSS source maps
+*.scssc
+.sass-cache
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
+
+# Ignore log files and databases
+*.log
+*.sql
+*.sqlite
+
+# Ignore Jetpack files
+.wpcom-meta.json
+
+# Ignore deployment files (Capistrano, Deployer, etc.)
+/capistrano/
+/deploy/
+
+# Ignore temporary files from editors and IDEs
+*.swp
+*.swo
+*.tmp
+*.bak
+*.orig
+*~
+.idea/
+.vscode/
