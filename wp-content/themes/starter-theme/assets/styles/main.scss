@@ -1,0 +1,25 @@
+// Specify the caracter encoding for stylesheets
+@charset "UTF-8";
+
+// CSS reset & normalize ----------------------------
+@use "vendors/normalize";
+@use "base/reset";
+
+// Abstracts ----------------------------
+@use "abstracts";
+
+// Basic styles ----------------------------
+@use "base/typography";
+@use "base/animations";
+
+// Components ----------------------------
+@use "components";
+
+// Layouts ----------------------------
+@use "layouts";
+
+// Pages ----------------------------
+@use "pages";
+
+// Themes ----------------------------
+@use "themes";
