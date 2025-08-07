@@ -7,3 +7,14 @@ $color-accent: oklch(77% 0.152 181.912);
 $color-success: oklch(76% 0.177 163.223);
 $color-warning: oklch(82% 0.189 84.429);
 $color-danger: oklch(71% 0.194 13.428);
+
+// Breakpoints ------------------
+$breakpoints: (
+  mobile-small: 320px,
+  mobile: 599px,
+  tablet-small: 768px,
+  tablet-portrait: 980px,
+  tablet-landscape: 1024px,
+  desktop: 1280px,
+  wide-screen: 1600px,
+);
