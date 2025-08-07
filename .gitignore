@@ -5,6 +5,7 @@
 /wp-content/cache/
 /wp-content/uploads/
 /wp-content/backup-*/
+/wp-content/plugins/
 
 # Ignore WordPress config and sensitive files
 wp-config.php
