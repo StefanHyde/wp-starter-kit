@@ -14,4 +14,13 @@ Timber\Timber::init();
 // Sets the directories (inside your theme) to find .twig files.
 Timber::$dirname = [ 'templates', 'views' ];
 
+
+ add_filter( 'timber/twig', function( \Twig\Environment $twig ) {
+    $twig->addFunction( new \Twig\TwigFunction(
+        'dump',
+        [ 'Symfony\Component\VarDumper\VarDumper', 'dump' ]
+    ) );
+    return $twig;
+} );
+
 new StarterSite();
