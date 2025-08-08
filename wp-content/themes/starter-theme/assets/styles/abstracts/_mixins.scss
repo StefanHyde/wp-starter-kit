@@ -18,6 +18,57 @@
   align-items: center;
 }
 
+/* To position an element to fill its parent (must be relative) */
+@mixin absolute-stretch($bg-color: null) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  @if $bg-color {
+    background-color: $bg-color;
+  }
+}
+
+// Pseudo-elements Mixins ---------------------
+/* Pseudo with dimensions */
+@mixin pseudo-block($width, $height, $bg-color: null) {
+  content: "";
+  position: absolute;
+  width: $width;
+  height: $height;
+  @if $bg-color {
+    background-color: $bg-color;
+  }
+}
+
+/* Pseudo with stretch */
+@mixin pseudo-block-stretch($bg-color: null) {
+  @include absolute-stretch($bg-color);
+  content: "";
+}
+
+// Fonts-Mixins
+/* To define basic fonts properties */
+@mixin ft($family: "", $size: "", $weight: "", $color: "", $lineheight: "") {
+  @if $family != "" {
+    font-family: $family;
+  }
+  @if $size != "" {
+    font-size: $size;
+  }
+  @if $weight != "" {
+    font-weight: $weight;
+  }
+  @if $color != "" {
+    color: $color;
+  }
+  @if $lineheight != "" {
+    line-height: $lineheight;
+  }
+}
+
 // Responsive Mixins ------------------
 @mixin mobile-small-only {
   @media screen and (max-width: map-get($breakpoints, mobile-small)) {
