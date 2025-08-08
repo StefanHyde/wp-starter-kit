@@ -1,3 +1,9 @@
+// Fonts ------------------
+$f_h: "Montserrat", Sans-Serif; // Headings
+$f_txt: "Lato", Sans-Serif; // Body text
+
+$fonts-path: "../fonts" !default;
+
 // Colors ------------------
 $color-white: oklch(100% 0.005 285.823);
 $color-dark: oklch(14% 0.005 285.823);
