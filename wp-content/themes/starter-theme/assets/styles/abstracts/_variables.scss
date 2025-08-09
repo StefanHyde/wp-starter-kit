@@ -14,6 +14,26 @@ $color-success: oklch(76% 0.177 163.223);
 $color-warning: oklch(82% 0.189 84.429);
 $color-danger: oklch(71% 0.194 13.428);
 
+// Font sizes ---------------------
+$s_h1: 48px;
+$s_h2: 36px;
+$s_h3: 28px;
+$s_small_title: 24px;
+$s_medium: 18px;
+$s_p: 16px;
+$s_small_p: 14px;
+$s_link: 16px;
+$s_link_small: 14px;
+
+// Wrappers ---------------------
+$wrapper-width: 1120px;
+$wrapper-medium-width: 1080px;
+$wrapper-small-width: 960px;
+$wrapper-extra-small-width: 710px;
+
+$wrapper-wide-width: 1200px;
+$wrapper-large-width: 1440px;
+
 // Breakpoints ------------------
 $breakpoints: (
   mobile-small: 320px,
