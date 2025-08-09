@@ -3,6 +3,15 @@
 {% block content %}
 	<div class="content-wrapper">
 		<article class="post-type-{{post.post_type}}" id="post-{{post.ID}}">
+		
+			{% if post.meta('title') or post.meta('subtitle') or post.meta('cover_image') %}
+				{% include 'blocks/cover-home/cover-home.twig' with {
+					'title': post.meta('title'),
+					'subtitle': post.meta('subtitle'),
+					'cover_image': post.meta('cover_image')
+				} %}
+			{% endif %}
+			
 			<section class="article-content">
 				<h1 class="article-h1">{{post.title}}</h1>
 				<div class="article-body">

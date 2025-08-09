@@ -1,0 +1,17 @@
+<div class="cover-home">
+	{% if title %}
+		<h1>{{ title }}</h1>
+	{% endif %}
+	{% if subtitle %}
+		<h2>{{ subtitle }}</h2>
+	{% endif %}
+	{% if cover_image %}
+		{% if cover_image.url %}
+			<img src="{{ cover_image.url }}" alt="{{ cover_image.alt }}">
+		{# If no URL is set, use TimberImage to get the correct image data #}
+		{% else %}
+			{% set image = TimberImage(cover_image) %}
+			<img src="{{ image.src }}" alt="{{ image.alt }}">
+		{% endif %}
+	{% endif %}
+</div>
