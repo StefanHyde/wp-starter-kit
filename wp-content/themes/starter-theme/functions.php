@@ -60,23 +60,17 @@ function my_acf_block_render_callback($attributes, $content = '', $is_preview = 
     );
 }
 
-// Fonction pour charger les groupes de champs ACF depuis les fichiers JSON
-function load_acf_field_groups() {
-    if (!function_exists('acf_add_local_field_group')) {
-        return;
-    }
-    
-    // Charger le groupe de champs cover-home
-    $cover_home_json = file_get_contents(get_template_directory() . '/blocks/cover-home/block.json');
-    $cover_home_group = json_decode($cover_home_json, true);
-    
-    if ($cover_home_group && is_array($cover_home_group)) {
-        foreach ($cover_home_group as $group) {
-            acf_add_local_field_group($group);
-        }
-    }
-}
+add_action('init', function () {
+    // Remove the content editor from pages
+    remove_post_type_support('page', 'editor');
 
-add_action('acf/init', 'load_acf_field_groups');
+    // Remove the content editor from posts
+    remove_post_type_support('post', 'editor');
+});
+
+
+
+
+
 
 new StarterSite();
