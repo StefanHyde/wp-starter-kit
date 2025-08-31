@@ -10,7 +10,7 @@ const sassCompiler = gulpSass(sass);
 
 // Paths
 const paths = {
-    scss: "assets/styles/**/*.scss",
+    scss: ["assets/styles/**/*.scss", "blocks/**/*.scss"],
     js: "assets/scripts/**/*.js",
     cssOutput: "dist/css",
     jsOutput: "dist/js",
