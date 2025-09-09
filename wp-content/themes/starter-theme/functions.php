@@ -68,6 +68,14 @@ add_action('init', function () {
     remove_post_type_support('post', 'editor');
 });
 
+// This hides the title field in the admin for pages
+add_action('admin_head', function() {
+    $screen = get_current_screen();
+    if ($screen->post_type === 'page') {
+        echo '<style>#titlediv { display:none; }</style>';
+    }
+});
+
 
 
 
