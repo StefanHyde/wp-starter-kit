@@ -91,6 +91,23 @@
         "mime_types": "",
         "allow_in_bindings": 0,
         "preview_size": "medium_large"
+      },
+      {
+        "key": "field_6908ab6d85c5a",
+        "label": "Lien CTA",
+        "name": "cta_link",
+        "aria-label": "",
+        "type": "link",
+        "instructions": "Ajoutez un lien ici",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "50",
+          "class": "",
+          "id": ""
+        },
+        "return_format": "url",
+        "allow_in_bindings": 0
       }
     ],
     "location": [
