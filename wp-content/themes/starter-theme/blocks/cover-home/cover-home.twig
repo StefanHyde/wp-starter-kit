@@ -4,10 +4,8 @@
 		{# Check if cover image is an array with a URL #}
 		{% if cover_image.url %}
 			<img src="{{ cover_image.url }}" alt="{{ cover_image.alt }}">
-		{# If no URL is set, use TimberImage to get the correct image data #}
 		{% else %}
-			{% set image = TimberImage(cover_image) %}
-			<img src="{{ image.src }}" alt="{{ image.alt }}">
+			<img src="{{ theme.link }}/assets/images/default-background.jpg" alt="default background">
 		{% endif %}
 	</div>
 	<div class="cover-home__content">
