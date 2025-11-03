@@ -1,11 +1,7 @@
-<div class="cover-home">
-	{% if title %}
-		<h1>{{ title }}</h1>
-	{% endif %}
-	{% if subtitle %}
-		<h2>{{ subtitle }}</h2>
-	{% endif %}
-	{% if cover_image %}
+<header class="cover-home">
+<div class="cover-home__inner">
+	<div class="cover-home__image">
+		{# Check if cover image is an array with a URL #}
 		{% if cover_image.url %}
 			<img src="{{ cover_image.url }}" alt="{{ cover_image.alt }}">
 		{# If no URL is set, use TimberImage to get the correct image data #}
@@ -13,5 +9,17 @@
 			{% set image = TimberImage(cover_image) %}
 			<img src="{{ image.src }}" alt="{{ image.alt }}">
 		{% endif %}
-	{% endif %}
+	</div>
+	<div class="cover-home__content">
+		{% if ontitle %}
+			<span class="cover-home__ontitle">{{ ontitle }}</span>
+		{% endif %}
+		{% if title %}
+			<h1 class="cover-home__title">{{ title }}</h1>
+		{% endif %}
+		{% if subtitle %}
+			<h2 class="cover-home__subtitle">{{ subtitle }}</h2>
+		{% endif %}
+	</div>
 </div>
+</header>
