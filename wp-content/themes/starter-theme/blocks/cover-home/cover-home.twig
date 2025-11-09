@@ -19,6 +19,8 @@
 			<h2 class="cover-home__subtitle">{{ subtitle }}</h2>
 		{% endif %}
 	</div>
+	{% if cta_link %}
 	<a href="{{cta_link.url}}" class="cover-home__cta-button">{{ cta_link.title }}</a>
+	{% endif %}
 </div>
 </header>

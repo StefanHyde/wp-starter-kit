@@ -85,9 +85,7 @@
         "min_width": "",
         "min_height": "",
         "min_size": "",
-        "max_width": "",
-        "max_height": "",
-        "max_size": "",
+        "max_size": 1,
         "mime_types": "",
         "allow_in_bindings": 0,
         "preview_size": "medium_large"
@@ -106,7 +104,7 @@
           "class": "",
           "id": ""
         },
-        "return_format": "url",
+        "return_format": "array",
         "allow_in_bindings": 0
       }
     ],
