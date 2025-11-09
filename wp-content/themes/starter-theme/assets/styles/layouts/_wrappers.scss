@@ -1,0 +1,55 @@
+@use "abstracts" as *;
+
+.wrapper {
+  position: relative;
+  max-width: $wrapper-width;
+  margin-left: var(--border-gutter);
+  margin-right: var(--border-gutter);
+
+  @media screen and (min-width: ($wrapper-width + 2 * $border-gutter)) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &.wrapper-medium {
+    max-width: $wrapper-medium-width;
+
+    @media screen and (min-width: ($wrapper-medium-width + 2 * $border-gutter)) {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  &.wrapper-small {
+    max-width: $wrapper-small-width;
+
+    @media screen and (min-width: ($wrapper-small-width + 2 * $border-gutter)) {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  &.wrapper-extra-small {
+    max-width: $wrapper-extra-small-width;
+
+    @media screen and (min-width: ($wrapper-extra-small-width + 2 * $border-gutter)) {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  &.wrapper-large {
+    max-width: $wrapper-large-width;
+    margin-left: var(--border-gutter);
+
+    @media screen and (min-width: ($wrapper-large-width + 2 * $border-gutter)) {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  .wrapper & {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

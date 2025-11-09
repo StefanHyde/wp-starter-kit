@@ -44,3 +44,25 @@ $breakpoints: (
   desktop: 1280px,
   wide-screen: 1600px,
 );
+
+// Margins & Gutters -----------------
+$border-gutter: 80px;
+$border-gutter-tablet: 40px;
+$border-gutter-mobile: 20px;
+
+$grid-gap: 40px;
+$grid-gap-small: 20px;
+$grid-gap-mobile: 20px;
+
+$section-spacing: 100px;
+$section-spacing-mobile: 50px;
+
+$bloc-spacing: 50px;
+$bloc-spacing-mobile: 30px;
+
+// Header & Toolbar Heights -----------------
+$header-height: 80px;
+$header-height-mobile: 80px;
+
+$toolbar-height: 70px;
+$toolbar-height-mobile: 60px;
